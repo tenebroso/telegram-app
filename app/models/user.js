@@ -1,14 +1,30 @@
 var User = DS.Model.extend({
-  title: DS.attr('string'),
-  isCompleted: DS.attr('boolean')
+  name: DS.attr('string'),
+  email: DS.attr('string'),
+  photo: DS.attr('string'),
+  password: DS.attr('password'),
+  following: DS.attr('string')
 });
 
 User.reopenClass({
   FIXTURES: [
    {
-     id: 1,
-     name: 'Learn Ember.js',
-     photo:''
+     id: 'jonbukiewicz',
+     name: 'Jon Bukiewicz',
+     email: 'jonathan@tenebroso.net',
+     photo:'/assets/jonB.jpg',
+     password: '1234',
+     following: 'johndoe',
+     followers: 'johndoe'
+   },
+   {
+     id: 'johndoe',
+     name: 'John Doe',
+     email: 'johndoe@gmail.com',
+     photo:'/assets/johnD.jpg',
+     password: '1234',
+     following: 'jonbukiewicz',
+     followers: 'johndoe'
    }
   ]
 });
