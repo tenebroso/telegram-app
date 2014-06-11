@@ -3,10 +3,11 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-	this.resource('telegram', { path: '/' }, function () { 
+	this.resource('dashboard', { path: '/' }, function () { 
 		this.route('login');
-		this.route('resetPassword');
-		this.route('resetPasswordConfirm');
+		this.route('signup');
+		this.route('password');
+		this.route('passwordconfirm');
 	});
 	this.route('home');
 	this.resource('user', {path: '/user/:user_id'}, function () { 
