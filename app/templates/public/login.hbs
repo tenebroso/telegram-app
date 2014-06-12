@@ -2,11 +2,11 @@
 
 	<h2>Get going...</h2>
 
-	{{input type="text" placeholder="Enter your username.." action="login" value=username}}
-	{{input type="password" placeholder="Enter your password.." action="login" value=password}}
+	{{input type="text" placeholder="Enter your username.." action="verifyLogin" value=username}}
+	{{input type="password" placeholder="Enter your password.." action="verifyLogin" value=password}}
 
 	<div class="form-submit">
-		<input type="submit" value="Log in" class="inline-block" {{action "login"}}>
+		<input type="submit" value="Log in" class="inline-block" {{action "verifyLogin"}}>
 		<p class="recover inline-block">
 			{{#link-to 'public.password'}}Recover Password{{/link-to}} 
 				or 
