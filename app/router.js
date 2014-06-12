@@ -3,18 +3,23 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-	this.resource('dashboard', { path: '/' }, function () { 
+
+	this.resource('public', { path: '/' }, function () { 
 		this.route('login');
-		this.route('signup');
+		this.route('signup', { path: '/'});
 		this.route('password');
-		this.route('passwordconfirm');
+		this.route('passwordconfirm', { path: '/password/confirm'});
 	});
-	this.route('home');
-	this.resource('user', {path: '/user/:user_id'}, function () { 
-		this.route('posts');
-		this.route('following');
-		this.route('followers');
+
+	this.route('dashboard');
+
+	this.resource('users', function () { 
+		this.route('user', {path: '/:user_id'}, function() {
+			this.route('following');
+			this.route('followers');
+		});
 	});
+	
 });
 
 export default Router;
