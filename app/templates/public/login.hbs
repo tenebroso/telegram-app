@@ -6,7 +6,7 @@
 	{{input type="password" placeholder="Enter your password.." action="login" value=password}}
 
 	<div class="form-submit">
-		<input type="submit" value="Log in" class="inline-block">
+		<input type="submit" value="Log in" class="inline-block" {{action "login"}}>
 		<p class="recover inline-block">
 			{{#link-to 'public.password'}}Recover Password{{/link-to}} 
 				or 
