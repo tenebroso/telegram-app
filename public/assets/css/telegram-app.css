@@ -177,6 +177,12 @@ input[type="submit"]:hover {
     margin:0 auto;
 }
 
+.logo a {
+    display:block;
+    width:100%;
+    height:100%;
+}
+
 .header {
     width:450px;
 }

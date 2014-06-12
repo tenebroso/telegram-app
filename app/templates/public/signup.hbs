@@ -2,14 +2,14 @@
 
 	<h2>Create your account</h2>
 
-	<input type="text" placeholder="Enter your name ...">
-	<input type="text" placeholder="Enter your username ...">
-	<input type="password" placeholder="Enter your password ...">
+	{{input type="text" placeholder="Enter your name.." action="signup" value=name}}
+	{{input type="text" placeholder="Enter your username.." action="signup" value=id}}
+	{{input type="password" placeholder="Enter your password.." action="signup" value=password}}
 
 	<div class="form-submit">
 
 		<input type="submit" value="Sign up" class="inline-block">
-		<p class="recover inline-block"><a href="/login">Login</a></p>
+		<p class="recover inline-block">{{#link-to 'public.login'}}Login{{/link-to}}</p>
 	</div>
 
 </section>
