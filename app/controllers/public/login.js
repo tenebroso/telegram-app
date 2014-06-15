@@ -1,15 +1,31 @@
 export default Ember.ObjectController.extend({
 
-	isLoggedIn: false,
+	username: '',
+	password: '',
+	
+	loginError: false,
 
 	actions: {
-		verifyLogin: function() {
-			this.store.find('user',username);
+	    
+	    verifyLogin: function() {
 
-			//get the username that was entered in the form, 
-			//search for the user object that has that username 
-			//check to see if the passwords match.
-		}
-	}
+		var username = this.get('username'),
+			password = this.get('password'),
+			promise = this.store.find('user', username),
+			controller = this;
 
+		promise.then(function(user){
+
+			if (user.get('password') === password) {
+				controller.transitionToRoute('dashboard');
+			} else{
+				loginError:true;
+			}
+		     
+		});
+
+    }
+
+  }
+  
 });

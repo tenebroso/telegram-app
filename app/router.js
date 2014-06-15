@@ -13,13 +13,10 @@ Router.map(function() {
 
 	this.route('dashboard');
 
-	this.resource('users', function () { 
-		this.route('user', {path: '/:user_id'}, function() {
-			this.route('following');
-			this.route('followers');
-		});
+	this.resource('user', {path: '/users/:user_id'}, function() {
+		this.route('following');
+		this.route('followers');
 	});
-	
 });
 
 export default Router;
