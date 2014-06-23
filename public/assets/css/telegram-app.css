@@ -133,6 +133,12 @@ input[type="submit"]:hover {
     color:#fff;
 }
 
+.alert {
+    font-style:italic;
+    color:red;
+    margin:1em 0;
+}
+
 .inline-block {
     display:inline-block;
     vertical-align: middle;
