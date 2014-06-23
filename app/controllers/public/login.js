@@ -14,21 +14,23 @@ export default Ember.ObjectController.extend({
 				controller = this;
 
 
-				promise.then(function(user){
-
-					if (user.get('password') === password) {
-						controller.transitionToRoute('dashboard');
-					} else {
-						controller.setProperties({
-							loginError:true
-						});
-						// Can I pull the error function below into this space in order to not repeat the same setProperty function?
-					}
-				     
-				}, function(error) {
+			var	loginFail = function() {
 					controller.setProperties({
 						loginError:true
 					});
+				};
+
+				promise.then(function(user){
+
+					if (user.get('password') === password) {
+						controller.get('session').set('user',user);
+						controller.transitionToRoute('dashboard');
+					} else {
+						loginFail();
+					}
+				     
+				}, function(error) {
+					loginFail();
 				});
 
     	}
