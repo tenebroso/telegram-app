@@ -12,11 +12,11 @@ export default Ember.ObjectController.extend({
 	    signup: function() {
 
 			var name = this.get('name');
-			var	username = this.get('username');
-			var	email = this.get('email');
-			var	password = this.get('password');
-			var	store = this.store;
-			var	controller = this;
+			var username = this.get('username');
+			var email = this.get('email');
+			var password = this.get('password');
+			var store = this.store;
+			var controller = this;
 
 			var	newUser = store.createRecord('user', {
 					id: username,
