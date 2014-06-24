@@ -1,4 +1,4 @@
-export default Ember.Application.initializer ({
+export default {
 	name: 'session',
 
   initialize: function(container, app){
@@ -7,6 +7,7 @@ export default Ember.Application.initializer ({
       user: null,
 
       isAuthenticated: function(){
+        //window.console.log('success!');
         return this.get('user') != null;
       }.property('user')
     });
@@ -18,4 +19,4 @@ export default Ember.Application.initializer ({
     app.inject('route', 'session', 'session:main');
     app.inject('controller', 'session', 'session:main');
   }
-});
+};

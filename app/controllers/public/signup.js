@@ -6,6 +6,7 @@ export default Ember.ObjectController.extend({
 	password: '',
 	signupError: false,
 
+
 	actions: {
 	    
 	    signup: function() {
@@ -15,6 +16,7 @@ export default Ember.ObjectController.extend({
 	    		email = this.get('email'),
 				password = this.get('password'),
 				store = this.store,
+				controller = this,
 
 				newUser = store.createRecord('user', {
 					id: username,
@@ -22,9 +24,28 @@ export default Ember.ObjectController.extend({
 					email: email,
 					password: password
 				});
-				
-				newUser.set('name',name);
-				newUser.set('id',username);
+
+				var userCreated = function() {
+					controller.get('session').set('user',newUser);
+					controller.transitionToRoute('posts');
+				};
+
+				var userFail = function() {
+					controller.setProperties({
+						signupError:true
+					});
+				};
+
+
+				newUser.save().then(function(user){
+
+					userCreated();
+				     
+				}, function(error) {
+
+					userFail();
+					
+				});
 
 
 			}
