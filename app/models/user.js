@@ -2,7 +2,7 @@ var User = DS.Model.extend({
   name: DS.attr('string'),
   email: DS.attr('string'),
   photo: DS.attr('string'),
-  password: DS.attr('password'),
+  password: DS.attr('string'),
   following: DS.attr('string')
 });
 

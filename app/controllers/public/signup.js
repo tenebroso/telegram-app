@@ -11,9 +11,9 @@ export default Ember.ObjectController.extend({
 	    
 	    signup: function() {
 
-	    	var name = this.get('name'),
-	    		username = this.get('username'),
-	    		email = this.get('email'),
+			var name = this.get('name'),
+				username = this.get('username'),
+				email = this.get('email'),
 				password = this.get('password'),
 				store = this.store,
 				controller = this,
@@ -44,12 +44,11 @@ export default Ember.ObjectController.extend({
 				}, function(error) {
 
 					userFail();
-					
+
 				});
 
+		}
 
-			}
+	}
 
-    	}
-  
 });

@@ -24,7 +24,7 @@ export default Ember.ObjectController.extend({
 
 					if (user.get('password') === password) {
 						controller.get('session').set('user',user);
-						controller.transitionToRoute('dashboard');
+						controller.transitionToRoute('posts');
 					} else {
 						loginFail();
 					}

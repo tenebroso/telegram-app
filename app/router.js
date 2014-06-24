@@ -11,7 +11,7 @@ Router.map(function() {
 		this.route('passwordconfirm', { path: '/password/confirm'});
 	});
 
-	this.route('dashboard');
+	this.route('posts');
 
 	this.resource('user', {path: '/users/:user_id'}, function() {
 		this.route('following');
