@@ -8,10 +8,10 @@ export default Ember.ObjectController.extend({
 	    
 	    verifyLogin: function() {
 
-			var username = this.get('username'),
-				password = this.get('password'),
-				promise = this.store.find('user', username),
-				controller = this;
+			var username = this.get('username');
+			var	password = this.get('password');
+			var	promise = this.store.find('user', username);
+			var	controller = this;
 
 
 			var	loginFail = function() {
