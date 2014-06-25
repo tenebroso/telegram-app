@@ -6,7 +6,7 @@ var Post = DS.Model.extend({
 
 Post.reopenClass({
 	FIXTURES: [
-		{
+	{
 		id: 1,
 		date: 'Tue, 10 Jun 2014 12:00:00 GMT',
 		content: 'Great teams constantly learn how to lorem ipsum lorem ipsum.',

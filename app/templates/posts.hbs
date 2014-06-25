@@ -1,5 +1,12 @@
+<div class="dashboard white-bg">
+
 {{#if session.isAuthenticated}} 
-	<div class="dashboard">
-		<p>Logged in as {{session.username}}</p>
-	</div>
+		<p>Logged in as {{user}}</p>
 {{/if}}
+
+{{content}}
+{{#each post in controller}}
+  {{post.content}}
+{{/each}}
+
+</div>

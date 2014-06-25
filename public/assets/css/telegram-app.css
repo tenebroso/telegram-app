@@ -208,6 +208,9 @@ input[type="submit"]:hover {
     float: right;
 }
 
+.white-bg {
+    background: white;
+}
 
 
 
