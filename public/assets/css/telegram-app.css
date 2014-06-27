@@ -65,12 +65,16 @@ textarea {
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
   box-sizing: border-box;
- }
+}
+
+html, body, .ember-view {
+    min-height:100%;
+    height:100%;
+}
 
 body {
     font-family: 'Open Sans', sans-serif;
     font-size:13px;
-    background:#008CB8;
 }
 
 p {
@@ -133,6 +137,15 @@ input[type="submit"]:hover {
     color:#fff;
 }
 
+.blue-bg {
+    background:#008CB8;
+}
+
+.login-container {
+    padding:125px 0 0;
+    min-height:100%;
+}
+
 .alert {
     font-style:italic;
     color:red;
@@ -153,7 +166,7 @@ input[type="submit"]:hover {
     width:900px;
     padding:37px 0;
     background:#fff;
-    margin:125px auto 0 auto;
+    margin:0 auto;
     position: relative;
 }
 
