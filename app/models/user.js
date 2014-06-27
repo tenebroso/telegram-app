@@ -1,3 +1,5 @@
+// http://emberjs.com/api/data/#method_attr
+
 var User = DS.Model.extend({
   name: DS.attr('string'),
   email: DS.attr('string'),

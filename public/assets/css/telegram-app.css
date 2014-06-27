@@ -157,6 +157,11 @@ input[type="submit"]:hover {
     vertical-align: middle;
 }
 
+.container {
+    margin:2em auto;
+    width:600px;
+}
+
 .one-third {
     width:33%;
 }
@@ -276,7 +281,19 @@ input[type="submit"]:hover {
 }
 
 
+/*  ==============================
+    Posts
+    ============================== */
 
+.posts {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+
+.post {
+    border-bottom:1px solid #eeeeee;
+}
 
 /* ==========================================================================
    Media Queries

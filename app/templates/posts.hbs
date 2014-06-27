@@ -6,8 +6,27 @@
 		<p>Logged in as {{user}}</p>
 {{/if}}
 
-{{#each post in controller}}
-  {{post.content}}
-{{/each}}
+	<div class="container">
+
+		<h1 class="page-title">Latest Posts</h1>
+
+		<ol class="posts">
+		
+			{{#each post in controller}}
+				<li class="post">
+					<div class="avatar-container">
+						<img src="{{user.photo}}" class="avatar">
+					</div>
+					<div class="post-container">
+						<p><strong>{{user.name}}</strong></p>
+						{{post.content}}
+						<p class="post-meta">2 minutes ago &bull; Delete</p>
+					</div>
+				</li>
+			{{/each}}
+
+		</ol>
+
+	</div>
 
 </div>
