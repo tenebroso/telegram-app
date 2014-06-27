@@ -1,5 +1,7 @@
 <div class="dashboard white-bg">
 
+{{outlet topbar}}
+
 {{#if session.isAuthenticated}} 
 		<p>Logged in as {{user}}</p>
 {{/if}}
