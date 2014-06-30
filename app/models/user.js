@@ -14,7 +14,7 @@ User.reopenClass({
      id: 'jonbukiewicz',
      name: 'Jon Bukiewicz',
      email: 'jonathan@tenebroso.net',
-     photo:'/assets/jonB.jpg',
+     photo:'assets/avatars/JonB.jpg',
      password: '1234',
      following: 'johndoe',
      followers: 'johndoe'
@@ -23,7 +23,7 @@ User.reopenClass({
      id: 'johndoe',
      name: 'John Doe',
      email: 'johndoe@gmail.com',
-     photo:'/assets/johnD.jpg',
+     photo:'assets/avatars/LouisCK.jpg',
      password: '1234',
      following: 'jonbukiewicz',
      followers: 'johndoe'

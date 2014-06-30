@@ -15,10 +15,10 @@
 			{{#each post in controller}}
 				<li class="post">
 					<div class="avatar-container">
-						<img src="{{user.photo}}" class="avatar">
+						<img src="{{post.id.photo}}" class="avatar">
 					</div>
 					<div class="post-container">
-						<p><strong>{{user.name}}</strong></p>
+						<p><strong>{{post.user.name}}</strong></p>
 						{{post.content}}
 						<p class="post-meta">2 minutes ago &bull; Delete</p>
 					</div>
