@@ -8,6 +8,18 @@
 
 	<div class="container">
 
+		{{! http://emberjs.com/api/classes/Ember.Handlebars.helpers.html#method_textarea }}
+		{{textarea class="post-textarea" placeholder="Add a new post" rows="5" maxlenth="140" value=postTextArea}}
+
+		<button class="post-publish" {{action "postPublish"}}>
+			Publish
+		</button>
+
+		<p class="post-character-count">{{charactersLeft}} characters</p>
+		
+
+		<div class="clearfix"></div>
+
 		<h1 class="page-title">Latest Posts</h1>
 
 		<ol class="posts">
@@ -19,7 +31,7 @@
 						<img {{bind-attr src="post.user.photo"}} class="avatar">
 					</div>
 					<div class="post-container inline-block">
-						<p class="username"><strong>{{post.user.name}}</strong></p>
+						<p class="username"><strong>{{#link-to 'user' post.user.id class="user-link inline-block"}}{{post.user.name}}{{/link-to}}</strong></p>
 						{{post.content}}
 						<p class="post-meta">2 minutes ago &bull; Delete</p>
 					</div>
