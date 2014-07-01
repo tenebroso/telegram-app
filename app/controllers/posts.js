@@ -23,7 +23,11 @@ export default Ember.ArrayController.extend({
     	//http://emberjs.com/guides/models/creating-and-deleting-records/
     	deletePost: function() {
 
-			store.deleteRecord(post);
+	    	var post = this.get('model');
+    			post.deleteRecord();
+    			post.save();
+
+	    	
 
     	},
 
