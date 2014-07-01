@@ -40,12 +40,13 @@
 						<p class="post-meta">
 				
 							{{format-date post.date}}
+							
+							{{#if isAuthor}}
 								&bull; 
-							{{#link-to}}
-								<span {{action "deletePost" post}}>
+								<a {{action "deletePost" post}}>
 									Delete
-								</span>
-							{{/link-to}}
+								</a>
+							{{/if}}
 						</p>
 					</div>
 				</li>
