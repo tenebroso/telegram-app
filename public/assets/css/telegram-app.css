@@ -23,6 +23,11 @@ html {
     text-shadow: none;
 }
 
+img {
+    max-width:100%;
+    height:auto;
+}
+
 hr {
     display: block;
     height: 1px;
@@ -155,6 +160,10 @@ input[type="submit"]:hover {
 .inline-block {
     display:inline-block;
     vertical-align: middle;
+}
+
+.no-margin {
+    margin:0;
 }
 
 .container {
@@ -293,6 +302,27 @@ input[type="submit"]:hover {
 
 .post {
     border-bottom:1px solid #eeeeee;
+    padding:0 0 0 0 ;
+    margin:0 0 1em 0;
+}
+
+.avatar-container,
+.post-container {
+    vertical-align:top;
+}
+
+.avatar-container {
+    width:50px;
+    height:50px;
+}
+
+.post-container {
+    width:calc(100% - 55px);
+    padding-left:15px;
+}
+
+.username {
+    margin-top:0;
 }
 
 /* ==========================================================================

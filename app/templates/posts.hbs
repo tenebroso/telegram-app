@@ -3,7 +3,7 @@
 {{outlet topbar}}
 
 {{#if session.isAuthenticated}} 
-		<p>Logged in as {{user}}</p>
+		<p>Logged in as {{session.user.name}}</p>
 {{/if}}
 
 	<div class="container">
@@ -14,11 +14,12 @@
 		
 			{{#each post in controller}}
 				<li class="post">
-					<div class="avatar-container">
-						<img src="{{post.id.photo}}" class="avatar">
+					<div class="avatar-container inline-block">
+					{{! http://emberjs.com/api/classes/Ember.Handlebars.helpers.html#method_bind-attr }}
+						<img {{bind-attr src="post.user.photo"}} class="avatar">
 					</div>
-					<div class="post-container">
-						<p><strong>{{post.user.name}}</strong></p>
+					<div class="post-container inline-block">
+						<p class="username"><strong>{{post.user.name}}</strong></p>
 						{{post.content}}
 						<p class="post-meta">2 minutes ago &bull; Delete</p>
 					</div>
