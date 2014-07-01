@@ -9,7 +9,7 @@
 	<div class="container">
 
 		{{! http://emberjs.com/api/classes/Ember.Handlebars.helpers.html#method_textarea }}
-		{{textarea class="post-textarea" placeholder="Add a new post" rows="5" maxlenth="140" value=postTextArea}}
+		{{textarea class="post-textarea" placeholder="Add a new post" rows="5" maxlength="140" value=postTextArea}}
 
 		<button class="post-publish" {{action "createPost"}}>
 			Publish
@@ -36,7 +36,7 @@
 						<p class="post-meta">
 						{{post.date}} &bull; 
 							{{#link-to}}
-								<span {{action "deletePost"}}>
+								<span {{action "deletePost" post}}>
 									Delete
 								</span>
 							{{/link-to}}

@@ -4,7 +4,7 @@ export default Ember.ArrayController.extend({
 
 	actions: {
 
-	    createPost: function() {
+		createPost: function() {
 
 			var post = this.store.createRecord('post', {
 				content: this.get('postTextArea'),
@@ -18,25 +18,25 @@ export default Ember.ArrayController.extend({
 				window.console.log('postTextArea');
 			}); 
 
-    	},
+		},
 
-    	//http://emberjs.com/guides/models/creating-and-deleting-records/
-    	deletePost: function() {
+		//http://emberjs.com/guides/models/creating-and-deleting-records/
+		deletePost: function(post) {
 
-	    	var post = this.get('model');
-    			post.deleteRecord();
-    			post.save();
+				post.deleteRecord();
+				post.get('isDeleted'); // => true
+				post.save().then(function(){
+					window.console.log('deleted post!');
+				})
 
-	    	
+    	}
+  	},
 
-    	},
-
-		charactersLeft: function() {
-			var remainChars = this.get('postTextArea').length();
-			var counter = 140 - remainChars;
-			return counter;
-			window.console.log('test!');
-		}.property('postTextArea'),
-  	}
+  	charactersLeft: function() {
+		var remainChars = this.get('postTextArea').length;
+		var counter = 140 - remainChars;
+		return counter;
+		window.console.log('test!');
+	}.property('postTextArea')
   
 });
