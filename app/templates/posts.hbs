@@ -34,7 +34,9 @@
 						<p class="username"><strong>{{#link-to 'user' post.user.id class="user-link inline-block"}}{{post.user.name}}{{/link-to}}</strong></p>
 						{{post.content}}
 						<p class="post-meta">
-						{{post.date}} &bull; 
+				
+							{{format-date post.date}}
+								&bull; 
 							{{#link-to}}
 								<span {{action "deletePost" post}}>
 									Delete
