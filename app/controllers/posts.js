@@ -2,6 +2,10 @@ export default Ember.ArrayController.extend({
 
 	postTextArea: '',
 	postFail: false,
+	//http://emberjs.com/api/classes/Ember.SortableMixin.html#property_sortProperties
+	sortProperties: ['date'],
+	//http://emberjs.com/api/classes/Ember.SortableMixin.html#property_sortAscending
+	sortAscending: false,
 
 	actions: {
 
