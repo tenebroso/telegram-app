@@ -3,7 +3,7 @@
 {{outlet topbar}}
 
 {{#if session.isAuthenticated}} 
-		<p>Logged in as {{session.user.name}}</p>
+		{{!placeholder for now}}
 {{/if}}
 
 	<div class="container">
@@ -11,7 +11,7 @@
 		{{! http://emberjs.com/api/classes/Ember.Handlebars.helpers.html#method_textarea }}
 		{{textarea class="post-textarea" placeholder="Add a new post" rows="5" maxlenth="140" value=postTextArea}}
 
-		<button class="post-publish" {{action "postPublish"}}>
+		<button class="post-publish" {{action "createPost"}}>
 			Publish
 		</button>
 
@@ -33,7 +33,14 @@
 					<div class="post-container inline-block">
 						<p class="username"><strong>{{#link-to 'user' post.user.id class="user-link inline-block"}}{{post.user.name}}{{/link-to}}</strong></p>
 						{{post.content}}
-						<p class="post-meta">2 minutes ago &bull; Delete</p>
+						<p class="post-meta">
+						{{post.date}} &bull; 
+							{{#link-to}}
+								<span {{action "deletePost"}}>
+									Delete
+								</span>
+							{{/link-to}}
+						</p>
 					</div>
 				</li>
 			{{/each}}
