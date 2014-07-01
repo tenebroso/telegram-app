@@ -3,7 +3,7 @@ export default Ember.Route.extend({
 		return this.store.find('post');
 	},
 	//http://emberjs.com/guides/routing/rendering-a-template/
-	renderTemplate: function(controller) {
+	renderTemplate: function() {
 		this.render('posts');
 		this.render('topbar', {
 			into: 'posts',

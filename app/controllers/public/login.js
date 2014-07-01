@@ -5,8 +5,8 @@ export default Ember.ObjectController.extend({
 	loginError: false,
 
 	actions: {
-	    
-	    verifyLogin: function() {
+
+		verifyLogin: function() {
 
 			var username = this.get('username');
 			var password = this.get('password');
@@ -29,12 +29,12 @@ export default Ember.ObjectController.extend({
 						loginFail();
 					}
 				     
-				}, function(error) {
+				}, function() {
 					loginFail();
 				});
 
-    	}
+		}
 
-  	}
-  
+	}
+
 });

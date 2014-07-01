@@ -8,8 +8,8 @@ export default Ember.ObjectController.extend({
 
 
 	actions: {
-	    
-	    signup: function() {
+	
+		signup: function() {
 
 			var name = this.get('name');
 			var username = this.get('username');
@@ -37,11 +37,11 @@ export default Ember.ObjectController.extend({
 			};
 
 
-				newUser.save().then(function(user){
+				newUser.save().then(function(){
 
 					userCreated();
 				     
-				}, function(error) {
+				}, function() {
 
 					userFail();
 

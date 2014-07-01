@@ -14,7 +14,7 @@ export default Ember.ArrayController.extend({
 			});
 			
 			post.save().then(function(){
-				self.set('content', '');
+				this.set('content', '');
 				window.console.log('postTextArea');
 			}); 
 
@@ -24,19 +24,17 @@ export default Ember.ArrayController.extend({
 		deletePost: function(post) {
 
 				post.deleteRecord();
-				post.get('isDeleted'); // => true
+				post.get('isDeleted');
 				post.save().then(function(){
 					window.console.log('deleted post!');
-				})
+				});
+		}
+	},
 
-    	}
-  	},
-
-  	charactersLeft: function() {
+	charactersLeft: function() {
 		var remainChars = this.get('postTextArea').length;
 		var counter = 140 - remainChars;
 		return counter;
-		window.console.log('test!');
 	}.property('postTextArea')
-  
+
 });
