@@ -289,6 +289,16 @@ input[type="submit"]:hover {
     color:#00b1f0;
 }
 
+.user-photo {
+    width:35px;
+    height:35px;
+}
+
+.user-photo,
+.user-link {
+    vertical-align: middle;
+}
+
 
 /*  ==============================
     Posts

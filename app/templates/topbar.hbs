@@ -8,7 +8,9 @@
 	</div>
 
 	<div class="one-third inline-block">
-		{{session.user.name}}
+		<img {{bind-attr src="session.user.photo"}} class="user-photo inline-block">
+		{{! link TBD }}
+		{{#link-to class="user-link inline-block"}}{{session.user.name}}{{/link-to}}
 	</div>
 
 </div>
