@@ -36,7 +36,7 @@
 					</div>
 					<div class="post-container inline-block">
 						<p class="username"><strong>{{#link-to 'user' post.user.id class="user-link inline-block"}}{{post.user.name}}{{/link-to}}</strong></p>
-						{{content}}
+						{{post.content.content}}
 						<p class="post-meta">
 				
 							{{format-date post.date}}
