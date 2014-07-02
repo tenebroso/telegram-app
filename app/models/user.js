@@ -30,7 +30,7 @@ User.reopenClass({
      password: '1234',
      following: ['jonbukiewicz','sally'],
      followers: ['jonbukiewicz','sally'],
-     posts:'2'
+     posts:['2']
    },
    {
      id: 'sally',
@@ -40,7 +40,7 @@ User.reopenClass({
      password: '1234',
      following: ['johndoe','jonbukiewicz'],
      followers: ['johndoe','jonbukiewicz'],
-     post:'3'
+     post:['3']
    }
   ]
 });
