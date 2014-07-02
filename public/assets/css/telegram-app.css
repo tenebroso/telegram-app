@@ -373,6 +373,47 @@ button,
     margin-top:0;
 }
 
+
+/*  ==============================
+    Profile
+    ============================== */
+
+.profile-center-block {
+    text-align: center;
+}
+
+.profile-nav-bar {
+    border-bottom:1px solid #eeeeee;
+    border-top:1px solid #eeeeee;
+    text-align: center;
+    margin:0 0 1em 0;
+}
+
+.profile-nav-bar h3 {
+    margin:0;
+    line-height:3em;
+}
+
+.profile-nav-item {
+    font-weight:normal;
+    padding:0 5px;
+    margin:0 15px;
+    border-bottom:3px solid #fff;
+}
+
+.profile-nav-item.active,
+.profile-nav-item:hover {
+    color:#666666;
+    border-bottom:3px solid #0084b2;
+}
+
+.profile-photo {
+    margin:0 auto;
+    display: block;
+    width:75px;
+    height:75px;
+}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */

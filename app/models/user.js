@@ -5,7 +5,9 @@ var User = DS.Model.extend({
   email: DS.attr('string'),
   photo: DS.attr('string'),
   password: DS.attr('string'),
-  following: DS.attr('string')
+  following: DS.hasMany('user'),
+  followers: DS.hasMany('user'),
+  posts: DS.hasMany('post')
 });
 
 User.reopenClass({
@@ -16,17 +18,29 @@ User.reopenClass({
      email: 'jonathan@tenebroso.net',
      photo:'assets/avatars/JonB.jpg',
      password: '1234',
-     following: 'johndoe',
-     followers: 'johndoe'
+     following: ['johndoe','sally'],
+     followers: ['johndoe','sally'],
+     posts:['1','4']
    },
    {
      id: 'johndoe',
      name: 'John Doe',
-     email: 'johndoe@gmail.com',
+     email: 'johndoetelegramtest@gmail.com',
      photo:'assets/avatars/LouisCK.jpg',
      password: '1234',
-     following: 'jonbukiewicz',
-     followers: 'johndoe'
+     following: ['jonbukiewicz','sally'],
+     followers: ['jonbukiewicz','sally'],
+     posts:'2'
+   },
+   {
+     id: 'sally',
+     name: 'Sally Jessy Raphael',
+     email: 'sallytelegramtest@gmail.com',
+     photo:'assets/avatars/Sally.jpg',
+     password: '1234',
+     following: ['johndoe','jonbukiewicz'],
+     followers: ['johndoe','jonbukiewicz'],
+     post:'3'
    }
   ]
 });
