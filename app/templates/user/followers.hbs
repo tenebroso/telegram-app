@@ -1,5 +1,21 @@
 {{#each follower in controller}}
-<!-- follower is just a variable that can be named anything !-->
-{{follower.name}}
+<ol class="posts user-list">
+		
+	{{#each}}
+		<li class="post">
+			<div class="avatar-container inline-block">
+			{{! http://emberjs.com/api/classes/Ember.Handlebars.helpers.html#method_bind-attr }}
+				<img {{bind-attr src="follower.photo"}} class="avatar">
+			</div>
+			<div class="post-container inline-block">
+				<button class="post-publish" {{action "followUser"}}>
+					Follow
+				</button>
+				<p class="username"><strong>{{#link-to 'user' follower.id class="user-link inline-block"}}{{follower.name}}{{/link-to}}</strong></p>
+			</div>
+			
+		</li>
+	{{/each}}
 
+</ol>
 {{/each}}

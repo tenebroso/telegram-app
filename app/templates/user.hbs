@@ -7,6 +7,10 @@
 		<div class="profile-center-block">
 			<img {{bind-attr src="session.user.photo"}} class="profile-photo">
 			<p><strong>{{session.user.name}}</strong><br />@{{session.user.id}}</p>
+
+			<button {{action "followUser"}}>
+				Follow
+			</button>
 		</div>
 
 		<div class="profile-nav-bar">

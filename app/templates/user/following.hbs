@@ -1,3 +1,21 @@
 {{#each following in controller}}
-	{{following.name}}
+<ol class="posts user-list">
+		
+	{{#each}}
+		<li class="post">
+			<div class="avatar-container inline-block">
+			{{! http://emberjs.com/api/classes/Ember.Handlebars.helpers.html#method_bind-attr }}
+				<img {{bind-attr src="following.photo"}} class="avatar">
+			</div>
+			<div class="post-container inline-block">
+				<button class="post-publish" {{action "unFollowUser"}}>
+					Unfollow
+				</button>
+				<p class="username"><strong>{{#link-to 'user' following.id class="user-link inline-block"}}{{following.name}}{{/link-to}}</strong></p>
+			</div>
+			
+		</li>
+	{{/each}}
+
+</ol>
 {{/each}}

@@ -316,6 +316,10 @@ input[type="submit"]:hover {
     margin:0 0 1em 0;
 }
 
+.user-list .post {
+   padding:0 0 1em 0;
+}
+
 .avatar-container,
 .post-container {
     vertical-align:top;
@@ -386,7 +390,7 @@ button,
     border-bottom:1px solid #eeeeee;
     border-top:1px solid #eeeeee;
     text-align: center;
-    margin:0 0 1em 0;
+    margin:1em 0;
 }
 
 .profile-nav-bar h3 {
