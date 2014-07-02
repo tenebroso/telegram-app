@@ -17,6 +17,18 @@ Post.reopenClass({
 		date: 'Mon, 09 June 2014 12:00:00 GMT',
 		content: 'Hello world!',
 		user: 'johndoe'
+	},
+	{
+		id: 3,
+		date: 'Mon, 05 June 2014 12:00:00 GMT',
+		content: 'Hello world! This is an example of a post that has a <a href="http://google.com">Link Inside</a>',
+		user: 'johndoe'
+	},
+	{
+		id: 4,
+		date: 'Mon, 17 June 2014 12:00:00 GMT',
+		content: 'Hello world! http://google.com',
+		user: 'jonbukiewicz'
 	}
   ]
 });
