@@ -24,7 +24,10 @@
 					{{format-date post.date}}
 
 					{{!#if isAuthor}}
-						{{!post-delete action="delete"}}
+						&bull; 
+						<a href="#" {{action "delete"}}>
+							Delete
+						</a>
 					{{!/if}}
 				</p>
 

@@ -1,6 +1,8 @@
 export default Ember.Component.extend({
-	delete: function() {
-		this.sendAction('delete');
-		window.console.log('bubbled2');
+	actions: {
+		delete: function() {
+			this.sendAction();
+			window.console.log('bubbled2');
+		}
 	}
 });

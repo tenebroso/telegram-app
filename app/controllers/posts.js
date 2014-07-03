@@ -37,13 +37,18 @@ export default Ember.ArrayController.extend({
 
 		},
 
-		//http://emberjs.com/guides/models/creating-and-deleting-records/
 		delete: function() {
+			window.console.log('deleted post2!');
+		},
+
+		//http://emberjs.com/guides/models/creating-and-deleting-records/
+		deletePost: function() {
 
 				//this.deleteRecord();
 				//this.get('isDeleted');
 				//this.save().then(function(){
 					window.console.log('deleted post!');
+					alert("test!");
 				//});
 		}
 	},
