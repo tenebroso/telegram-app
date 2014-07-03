@@ -52,17 +52,6 @@ export default Ember.ArrayController.extend({
 		var remainChars = this.get('postTextArea').length;
 		var counter = 140 - remainChars;
 		return counter;
-	}.property('postTextArea'),
-
-	isAuthor: function(){
-		var author = this.get('post.user');
-		var currentUser = this.get('session.user');
-
-		if (author === currentUser) {
-			return true;
-		} else {
-			return false;
-		}
-	}.property('model.isAuthor')
+	}.property('postTextArea')
 
 });
