@@ -2,9 +2,6 @@
 	{{format-date date}}
 
 	{{!#if isAuthor}}
-		&bull; 
-		<a href="#" {{action "deletePost" post}}>
-			Delete
-		</a>
+		{{post-delete action="deletePost"}}
 	{{!/if}}
 </p>
