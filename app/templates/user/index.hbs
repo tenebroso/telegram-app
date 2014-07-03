@@ -1,1 +1,9 @@
-{{post-block post=post posts=model}}
+{{!ost-block post=post posts=model}}
+
+<ol class="posts">
+	{{#each post in controller}}
+
+		{{post-block delete="deletePost" param=post post=post}}
+
+	{{/each}}
+</ol>

@@ -1,12 +1,15 @@
 export default Ember.ArrayController.extend({
 	actions: {
-		delete: function() {
+		deletePost: function(post) {
 
-				//this.deleteRecord();
-				//this.get('isDeleted');
-				//this.save().then(function(){
+			//debugger;
+
+				post.deleteRecord();
+				post.get('isDeleted');
+				post.save().then(function(){
 					window.console.log('deleted post!');
-				//});
+					//alert("test!");
+				});
 		}
 	}
 });
