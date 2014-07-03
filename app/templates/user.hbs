@@ -5,8 +5,8 @@
 	<div class="container">
 
 		<div class="profile-center-block">
-			<img {{bind-attr src="session.user.photo"}} class="profile-photo">
-			<p><strong>{{session.user.name}}</strong><br />@{{session.user.id}}</p>
+			<img {{bind-attr src="photo"}} class="profile-photo">
+			<p><strong>{{name}}</strong><br />@{{id}}</p>
 
 			<button {{action "followUser"}}>
 				Follow
@@ -15,7 +15,7 @@
 
 		<div class="profile-nav-bar">
 			<h3>
-				{{#link-to "user" class="profile-nav-item inline-block"}}Posts{{/link-to}}
+				{{#link-to "user.index" class="profile-nav-item inline-block"}}Posts{{/link-to}}
 				{{#link-to "user.following" class="profile-nav-item inline-block"}}Following{{/link-to}}
 				{{#link-to "user.followers" class="profile-nav-item inline-block"}}Followers{{/link-to}}
 			</h3>

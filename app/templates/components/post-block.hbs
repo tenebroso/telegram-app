@@ -1,0 +1,30 @@
+<li class="post">
+
+	<div class="avatar-container inline-block">
+	{{! http://emberjs.com/api/classes/Ember.Handlebars.helpers.html#method_bind-attr }}
+		<img {{bind-attr src="photo"}} class="avatar">
+	</div>
+
+	<div class="post-container inline-block">
+
+		<p class="username">
+			<strong>
+				{{#link-to 'user' id class="user-link inline-block"}}{{name}}{{/link-to}}
+			</strong>
+		</p>
+
+		{{{content}}}
+
+		<p class="post-meta">
+			{{format-date date}}
+			
+			{{#if isAuthor}}
+				&bull; 
+				<a href="#" {{action "deletePost" post}}>
+					Delete
+				</a>
+			{{/if}}
+		</p>
+
+	</div>
+</li>
