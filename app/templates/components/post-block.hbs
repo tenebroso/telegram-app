@@ -1,39 +1,31 @@
-<ol class="posts">
+<li class="post">
 
-	{{#each post in posts}}
+	<div class="avatar-container inline-block">
 
-		<li class="post">
+		<img {{bind-attr src="post.user.photo"}} class="avatar">
 
-			<div class="avatar-container inline-block">
+	</div>
 
-				<img {{bind-attr src="post.user.photo"}} class="avatar">
+	<div class="post-container inline-block">
 
-			</div>
+		<p class="username">
+			<strong>
+				{{#link-to 'user' post.user.id class="user-link inline-block"}}{{post.user.name}}{{/link-to}}
+			</strong>
+		</p>
 
-			<div class="post-container inline-block">
+		{{{post.content}}}
 
-				<p class="username">
-					<strong>
-						{{#link-to 'user' post.user.id class="user-link inline-block"}}{{post.user.name}}{{/link-to}}
-					</strong>
-				</p>
+		<p class="post-meta">
+			{{format-date post.date}}
 
-				{{{post.content}}}
+			{{!#if isAuthor}}
+				&bull; 
+				<a href="#" {{action "delete" post}}>
+					Delete
+				</a>
+			{{!/if}}
+		</p>
 
-				<p class="post-meta">
-					{{format-date post.date}}
-
-					{{!#if isAuthor}}
-						&bull; 
-						<a href="#" {{action "delete" post}}>
-							Delete
-						</a>
-					{{!/if}}
-				</p>
-
-			</div>
-		</li>
-
-	{{/each}}
-
-</ol>
+	</div>
+</li>

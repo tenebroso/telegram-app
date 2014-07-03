@@ -40,7 +40,7 @@ export default Ember.ArrayController.extend({
 		//http://emberjs.com/guides/models/creating-and-deleting-records/
 		deletePost: function(post) {
 
-			debugger;
+			//debugger;
 
 				post.deleteRecord();
 				post.get('isDeleted');

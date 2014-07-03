@@ -25,7 +25,13 @@
 
 		<h1 class="page-title">Latest Posts</h1>
 
-		{{post-block delete="deletePost" param=post posts=model}}
+		<ol class="posts">
+
+		{{#each post in controller}}
+
+			{{post-block delete="deletePost" param=post post=post}}
+
+		{{/each}}
 
 		</ol>
 
