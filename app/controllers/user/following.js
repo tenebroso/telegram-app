@@ -6,7 +6,7 @@ export default Ember.ArrayController.extend({
 
 		unFollowUser: function() {
 
-				followUser: false;
+				//followUser: false;
 				window.console.log('unfollowed!');
 
 		}

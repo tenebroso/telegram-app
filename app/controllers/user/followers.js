@@ -6,7 +6,7 @@ export default Ember.ArrayController.extend({
 
 		followUser: function() {
 
-				followedByCurrentUser: true;
+				//followedByCurrentUser: true;
 				window.console.log('followed!');
 
 		}

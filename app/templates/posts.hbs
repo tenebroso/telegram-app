@@ -1,28 +1,27 @@
 <div class="dashboard white-bg">
 
-{{outlet topbar}}
-
-{{#if session.isAuthenticated}} 
-		{{!placeholder for now}}
-{{/if}}
+	{{outlet topbar}}
 
 	<div class="container">
 
-		{{! http://emberjs.com/api/classes/Ember.Handlebars.helpers.html#method_textarea }}
-		{{textarea class="post-textarea" placeholder="Add a new post" rows="5" maxlength="140" value=postTextArea}}
+		{{#if session.isAuthenticated}} 
+			{{! http://emberjs.com/api/classes/Ember.Handlebars.helpers.html#method_textarea }}
+			{{textarea class="post-textarea" placeholder="Add a new post" rows="5" maxlength="140" value=postTextArea}}
 
-		{{#if postError}}
-			<div class="alert">Please enter text above.</div>
+			{{#if postError}}
+				<div class="alert">Please enter text above.</div>
+			{{/if}}
+
+			<button class="post-publish" {{action "createPost"}}>
+				Publish
+			</button>
+
+			<p class="post-character-count">{{charactersLeft}} characters</p>
+			
+
+			<div class="clearfix"></div>
+
 		{{/if}}
-
-		<button class="post-publish" {{action "createPost"}}>
-			Publish
-		</button>
-
-		<p class="post-character-count">{{charactersLeft}} characters</p>
-		
-
-		<div class="clearfix"></div>
 
 		<h1 class="page-title">Latest Posts</h1>
 

@@ -18,5 +18,6 @@ export default {
     /* http://emberjs.com/api/classes/Ember.Application.html#method_inject */
     app.inject('route', 'session', 'session:main');
     app.inject('controller', 'session', 'session:main');
+    app.inject('component', 'session', 'session:main');
   }
 };
