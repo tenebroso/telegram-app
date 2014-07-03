@@ -4,15 +4,29 @@
 
 		<li class="post">
 
-			{{post-avatar avatar=post.user.photo}}
+			<div class="avatar-container inline-block">
+
+				<img {{bind-attr src="post.user.photo"}} class="avatar">
+
+			</div>
 
 			<div class="post-container inline-block">
 
-				{{user-name name=post.user.name username=post.user.id}}
+				<p class="username">
+					<strong>
+						{{#link-to 'user' post.user.id class="user-link inline-block"}}{{post.user.name}}{{/link-to}}
+					</strong>
+				</p>
 
 				{{{post.content}}}
 
-				{{post-meta date=post.date}}
+				<p class="post-meta">
+					{{format-date post.date}}
+
+					{{!#if isAuthor}}
+						{{!post-delete action="delete"}}
+					{{!/if}}
+				</p>
 
 			</div>
 		</li>
