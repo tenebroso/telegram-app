@@ -1,30 +1,24 @@
-<li class="post">
+<ol class="posts">
 
-	<div class="avatar-container inline-block">
-	{{! http://emberjs.com/api/classes/Ember.Handlebars.helpers.html#method_bind-attr }}
-		<img {{bind-attr src="photo"}} class="avatar">
-	</div>
+	{{#each post in posts}}
 
-	<div class="post-container inline-block">
+		<li class="post">
 
-		<p class="username">
-			<strong>
-				{{#link-to 'user' id class="user-link inline-block"}}{{name}}{{/link-to}}
-			</strong>
-		</p>
+			<div class="avatar-container inline-block">
+				{{post-avatar avatar=post.user.photo}}
+			</div>
 
-		{{{content}}}
+			<div class="post-container inline-block">
 
-		<p class="post-meta">
-			{{format-date date}}
-			
-			{{#if isAuthor}}
-				&bull; 
-				<a href="#" {{action "deletePost" post}}>
-					Delete
-				</a>
-			{{/if}}
-		</p>
+				{{user-name name=post.user.name username=post.user.id}}
 
-	</div>
-</li>
+				{{{post.content}}}
+
+				{{post-meta date=post.date}}
+
+			</div>
+		</li>
+
+	{{/each}}
+
+</ol>

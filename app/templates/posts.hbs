@@ -26,11 +26,7 @@
 
 		<h1 class="page-title">Latest Posts</h1>
 
-		<ol class="posts">
-		
-			{{#each post in controller itemController="post"}}
-				{{{post-block date=date content=content.content photo=user.photo name=user.name id=user.id}}}
-			{{/each}}
+		{{post-block posts=model}}
 
 		</ol>
 
