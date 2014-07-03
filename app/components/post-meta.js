@@ -1,5 +1,5 @@
 export default Ember.Component.extend({
-	delete: function() {
+	click: function() {
 		this.sendAction('delete');
 		window.console.log('bubbled');
 	},
