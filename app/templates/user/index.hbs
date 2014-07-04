@@ -3,7 +3,7 @@
 <ol class="posts">
 	{{#each post in controller}}
 
-		{{post-block delete="deletePost" param=post post=post}}
+		{{post-block delete="deletePost" param=post user=controller.session.user post=post}}
 
 	{{/each}}
 </ol>
