@@ -1,4 +1,10 @@
 export default Ember.Route.extend({
+	redirectToLogin: function() {
+		if (!session.isAuthenticated) {
+			this.transitionTo('public');
+			window.console.log('not logged in');
+		}
+	},
 	model: function() {
 		return this.store.find('post');
 	},

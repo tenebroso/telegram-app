@@ -35,19 +35,6 @@ export default Ember.ArrayController.extend({
 				postFail();
 			}
 
-		},
-
-		//http://emberjs.com/guides/models/creating-and-deleting-records/
-		deletePost: function(post) {
-
-			//debugger;
-
-				post.deleteRecord();
-				post.get('isDeleted');
-				post.save().then(function(){
-					window.console.log('deleted post!');
-					//alert("test!");
-				});
 		}
 	},
 
