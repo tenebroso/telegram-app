@@ -7,10 +7,15 @@
 		{{#link-to 'posts' class="logo"}}Telegram{{/link-to}}
 	</div>
 
+	
+
 	<div class="one-third inline-block">
+		{{#if session.isAuthenticated}} 
 		<img {{bind-attr src="session.user.photo"}} class="user-photo inline-block">
 		{{! link TBD }}
 		{{#link-to 'user' session.user.id class="user-link inline-block"}}{{session.user.name}}{{/link-to}}
+		{{/if}}
 	</div>
+	
 
 </div>
