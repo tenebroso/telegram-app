@@ -1,6 +1,7 @@
 export default Ember.Route.extend({
-	redirectToLogin: function() {
-		if (!session.isAuthenticated) {
+	beforeModel: function() {
+		var loggedIn = this.get('session.isAuthenticated');
+		if (!loggedIn) {
 			this.transitionTo('public');
 			window.console.log('not logged in');
 		}
