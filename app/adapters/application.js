@@ -1,1 +1,3 @@
-export default DS.RESTAdapter.extend();
+export default DS.FIXTUREAdapter.extend({
+
+});
