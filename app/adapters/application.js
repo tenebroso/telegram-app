@@ -1,3 +1,3 @@
-export default DS.FIXTUREAdapter.extend({
-
+export default DS.RESTAdapter.extend({
+	 namespace: 'api'
 });
