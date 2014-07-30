@@ -13,17 +13,15 @@ export default Ember.Route.extend({
 		},
 		logout: function(){
 
-
-			var controller = this;
-
 			$.get('/api/logout').done(function(){
 				window.console.log('logged out');
-				controller.transitionToRoute('public');
 			}).fail(function(){
 				window.console.log('error');
 			}).always(function(){
 				window.console.log('complete');
 			});
+
+			this.transitionTo('public');
 		}
 	}
 });
