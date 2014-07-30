@@ -14,15 +14,11 @@ export default Ember.Route.extend({
 		logout: function(){
 
 
-			var controller = this; 
-
-			function transitionToHome() {
-				this.transitionTo('public');
-			}
+			var controller = this;
 
 			$.get('/api/logout').done(function(){
 				window.console.log('logged out');
-				transitionToHome();
+				controller.transitionToRoute('public');
 			}).fail(function(){
 				window.console.log('error');
 			}).always(function(){
