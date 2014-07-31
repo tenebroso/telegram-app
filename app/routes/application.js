@@ -7,7 +7,7 @@ export default Ember.Route.extend({
 				var user = users.get('firstObject');
 				route.set('session.user', user);
 			}
-			return user;
+			return users;
 		});
 	},
 	actions: {
