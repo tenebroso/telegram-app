@@ -5,8 +5,8 @@ var User = DS.Model.extend({
   email: DS.attr('string'),
   photo: DS.attr('string'),
   password: DS.attr('string'),
-  following: DS.hasMany('user'),
-  followers: DS.hasMany('user'),
+  //following: DS.hasMany('user'),
+  //followers: DS.hasMany('user'),
   posts: DS.hasMany('post')
 });
 
