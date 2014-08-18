@@ -53,7 +53,7 @@ export default Ember.Route.extend({
 				url: '/api/unfollow',
 				type: 'GET',
 				dataType: 'json',
-				data: {followUsername: id},
+				data: {unFollowUsername: id},
 				success: function() {
 					window.console.log('follow ajax success');
 				},
