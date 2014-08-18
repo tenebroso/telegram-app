@@ -34,12 +34,26 @@ export default Ember.Route.extend({
 
 			this.transitionTo('public');
 		},
-		followUser: function(user) {
+		followUser: function(id) {
 			$.ajax({
 				url: '/api/follow',
 				type: 'GET',
 				dataType: 'json',
-				data: {followUsername: 'jonbukiewicz'},
+				data: {followUsername: id},
+				success: function() {
+					window.console.log('follow ajax success');
+				},
+				error: function(err) {
+					window.console.log(err);
+				}
+			});
+		},
+		unFollowUser: function(id) {
+			$.ajax({
+				url: '/api/unfollow',
+				type: 'GET',
+				dataType: 'json',
+				data: {followUsername: id},
 				success: function() {
 					window.console.log('follow ajax success');
 				},

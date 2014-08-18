@@ -8,7 +8,7 @@
 				<img {{bind-attr src="following.photo"}} class="avatar">
 			</div>
 			<div class="post-container inline-block">
-				<button class="post-publish" {{action "unFollowUser"}}>
+				<button class="post-publish" {{action "unFollowUser" id}}>
 					Unfollow
 				</button>
 				<p class="username"><strong>{{#link-to 'user' following.id class="user-link inline-block"}}{{following.name}}{{/link-to}}</strong></p>
