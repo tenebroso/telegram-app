@@ -7,7 +7,7 @@
 				<img {{bind-attr src="follower.photo"}} class="avatar">
 			</div>
 			<div class="post-container inline-block">
-				{{#if follower.followingCurrentuser}}
+				{{#if follower.followedByLoggedInUser}}
 					<button class="post-publish" {{action "followUser" follower.id}}>
 						Follow
 					</button>
